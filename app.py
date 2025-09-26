@@ -4,8 +4,9 @@ st.title('Health Insurance Premium Prediction')
 age = st.number_input('Age:')
 bmi = st.number_input('BMI:')
 childer = st.number_input('Number of Children:')
-gender = st.text_input('Gender')
-smoker = st.text_input('Smoker (yes/no):')
+gender = st.selectbox('Select gender:',('NA','male','female'))
+
+smoker = st.radio('Smoker (yes/no):',('NA','yes','no'))
 model = pickle.load(open('model.pkl', 'rb'))
 
 if st.button('Predict'):
