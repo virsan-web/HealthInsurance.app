@@ -6,7 +6,7 @@ bmi = st.number_input('BMI:')
 childer = st.number_input('Number of Children:')
 gender = st.selectbox('Select gender:',('NA','male','female'))
 
-smoker = st.radio('Smoker (yes/no):',('NA','yes','no'))
+smoker = st.radio('Smoker (yes/no):',('yes','no'))
 model = pickle.load(open('model.pkl', 'rb'))
 
 if st.button('Predict'):
